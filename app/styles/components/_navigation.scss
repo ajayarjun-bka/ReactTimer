@@ -6,9 +6,24 @@
     .menu-text{
         color: $nav-text-color;
     }
-}
 
-.menu > .menu-text > a{
+    .active-link{
+        color: $white;
+        font-weight: bold;
+    }
+
+    .menu > .menu-text > a{
     display: inline;
     padding: 0px;
+    }
+
+    .nav-title
+    {
+        color: $nav-title;
+        font-size:20px; 
+        font-weight: bold;
+        text-transform:uppercase;
+    }
+
 }
+

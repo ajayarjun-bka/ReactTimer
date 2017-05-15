@@ -1,12 +1,12 @@
-var React = require('react');
-var {Link, IndexLink} = require('react-router');
+const React = require('react');
+const {Link, IndexLink} = require('react-router');
 
-var Navigation = React.createClass({
+const Navigation = React.createClass({
   onSearch: function(e)
   {
     e.preventDefault();
-    var temp = this.refs.searchInput.value;
-    var search = encodeURIComponent(temp);
+    const temp = this.refs.searchInput.value;
+    const search = encodeURIComponent(temp);
     if(search && search.length>0){
       this.refs.searchInput.value="";
       window.location.hash ='#/?location='+search;
@@ -18,12 +18,12 @@ var Navigation = React.createClass({
       <div className="top-bar">
           <div className="top-bar-left">
             <ul className="menu">
-              <li className="menu-text">React Timer App</li>
+              <li className="nav-title">React Timer App</li>
               <li>
-                <IndexLink to="/timer" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Timer</IndexLink>
+                <IndexLink to="/timer" activeClassName="active-link">Timer</IndexLink>
               </li>
               <li>
-                <Link to="/countdown" activeClassName="active"  activeStyle={{fontWeight: 'bold'}}>Countdown</Link>
+                <Link to="/countdown" activeClassName="active-link">Countdown</Link>
               </li>
             </ul>
           </div>
