@@ -1,11 +1,12 @@
 import React from 'react';
+import Clock from 'Clock';
 
 const Timer = React.createClass({
     render:function()
     {
         return(
             <div>
-            <h2>Timer</h2>
+                <Clock totalSeconds={615}/>
             </div>
         );
     }
