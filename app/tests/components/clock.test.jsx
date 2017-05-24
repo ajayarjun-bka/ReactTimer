@@ -17,9 +17,6 @@ describe('render clock', () => {
         var clock = TestUtils.renderIntoDocument(<Clock totalSeconds={62}></Clock>);
         var element = $(ReactDOM.findDOMNode(clock));
         var  actualtext=element.find('.clock-text').text();
-        console.log('====================================');
-        console.log(actualtext);
-        console.log('====================================');
         expect(actualtext).toBe('01:02');
     })
 });
